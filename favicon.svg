@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#fff"/><path d="M15 33 32 16M19 15h14v14" fill="none" stroke="#643cff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080">
+  <!-- Favicon da SUPER: o raio do isotipo (IMG/Elemento 1.1.svg), em branco sobre o roxo da marca -->
+  <rect width="1080" height="1080" rx="240" fill="#643cff"/>
+  <path fill="#fff" transform="translate(540 548) scale(.92) translate(-537 -548)" d="M643.43,497.66l-188.16,115.15h63.41l-147.71,215.52c12.43,7.33,25.38,13.87,38.78,19.53l261.6-235.05,128.16-115.150h-156.09ZM468.48,561.67h16.38l188.16-115.15h-51.34s-9.98,0-9.98,0l90.61-169.17,5.6-10.45c-14.28-8.790-29.27-16.51-44.88-23.06l-157.64,153.83-50.05,48.84-118,115.16h131.15ZM782.93,126.83l-62.46,60.95c7.81,4.01,15.470,8.27,22.98,12.77l39.48-73.72ZM273.960,969.88l75.29-67.65c-7.08-3.72-14.04-7.63-20.87-11.76l-54.43,79.41Z"/>
+</svg>
