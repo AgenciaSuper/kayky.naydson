@@ -73,21 +73,19 @@
     /* Palavras que trocam: 12,5s = volta completa (2,5s cada). */
     .troca { display: inline-grid; justify-items: start; }
     .palavras { display: grid; }
-    .troca > span { grid-area: 1 / 1; opacity: 0; animation: escreve 12.5s infinite backwards; }
+    .troca > span { grid-area: 1 / 1; opacity: 0; animation: vira 12.5s infinite backwards; }
     .troca > span:nth-child(1) { opacity: 1; animation-delay: -.8s; }
     .troca > span:nth-child(2) { animation-delay: 1.7s; }
     .troca > span:nth-child(3) { animation-delay: 4.2s; }
     .troca > span:nth-child(4) { animation-delay: 6.7s; }
     .troca > span:nth-child(5) { animation-delay: 9.2s; }
-    .artigos > span { animation-name: artigo; }
-    @keyframes escreve {
-      0% { opacity: 1; clip-path: inset(-40% 120% -40% -10%); animation-timing-function: cubic-bezier(.4,0,.2,1); }
-      5.6% { opacity: 1; clip-path: inset(-40% -30% -40% -10%); transform: none; }
-      17.6% { opacity: 1; clip-path: inset(-40% -30% -40% -10%); transform: none; animation-timing-function: ease-in; }
-      20% { opacity: 0; clip-path: inset(-40% -30% -40% -10%); transform: translateY(-8%); }
-      100% { opacity: 0; clip-path: inset(-40% 120% -40% -10%); }
+    /* Giro para trás, de baixo para cima. --raio = profundidade do giro. */
+    .palavras { --raio: calc(80 * var(--u)); } .artigos { --raio: calc(28 * var(--u)); }
+    @keyframes vira {
+      0% { opacity: 0; transform: perspective(calc(900 * var(--u))) translateZ(calc(var(--raio) * -1)) rotateX(-90deg) translateZ(var(--raio)); animation-timing-function: cubic-bezier(.3,0,.2,1); }
+      5%, 20% { opacity: 1; transform: perspective(calc(900 * var(--u))) translateZ(calc(var(--raio) * -1)) rotateX(0deg) translateZ(var(--raio)); animation-timing-function: cubic-bezier(.3,0,.2,1); }
+      25%, 100% { opacity: 0; transform: perspective(calc(900 * var(--u))) translateZ(calc(var(--raio) * -1)) rotateX(90deg) translateZ(var(--raio)); }
     }
-    @keyframes artigo { 0% { opacity: 0; transform: translateY(45%); } 2.4%, 17.6% { opacity: 1; transform: none; } 20%, 100% { opacity: 0; transform: translateY(-45%); } }
 
 
     /* ---------- CARDS ---------- */
