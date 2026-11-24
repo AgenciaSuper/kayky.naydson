@@ -164,17 +164,39 @@
       :root { --u: calc(clamp(1000px, 140vh, 1200px) / 1920); }
     }
 
-    /* ---------- CELULAR: layout inteiro igual ao PSD, na escala da tela ---------- */
+    /* ---------- CELULAR: medidas do PSD ampliado para celular, na escala da tela ---------- */
     @media (max-width: 999.98px) {
       :root { --u: calc(100vw / 1920); }
-      .faixa { background: var(--roxo) url(faixa-xadrez.webp) center / 100% 100% no-repeat; }
+      .selo { left: calc(155 * var(--u)); }
+      .perfil { top: calc(432 * var(--u)); }
+      .perfil span { font-size: calc(44 * var(--u)); letter-spacing: .16em; line-height: calc(48 * var(--u)); }
       .f1 { top: calc(927 * var(--u)); } .nao { top: calc(1098 * var(--u)); }
-      .faixa .col { padding-top: calc(215 * var(--u)); } .faixa .manuscrito { margin-bottom: calc(8 * var(--u)); }
-      .cards { padding-top: calc(266 * var(--u)); }
-      .card .lista { font-size: calc(24 * var(--u)); }
-      .fim { padding-top: calc(278 * var(--u)); }
-      .zap { font-size: calc(21 * var(--u)); min-height: calc(60 * var(--u)); }
-      footer { padding: calc(125 * var(--u)) 0 calc(90 * var(--u)); }
+      .faixa { background: var(--roxo) url(faixa-xadrez.webp) center / 100% 100% no-repeat; }
+      .faixa .col { padding: calc(172 * var(--u)) 0 0 calc(164 * var(--u)); }
+      .faixa strong { font-size: calc(49.7 * var(--u)); line-height: calc(66 * var(--u)); }
+      .faixa .manuscrito { width: calc(764 * var(--u)); margin: calc(-5 * var(--u)) 0 calc(10 * var(--u)) calc(3 * var(--u)); }
+      .faixa p { font-size: calc(46 * var(--u)); line-height: calc(58 * var(--u)); }
+      .cards { padding-top: calc(144 * var(--u)); }
+      .card { width: calc(1621 * var(--u)); height: calc(787 * var(--u)); border-radius: calc(98 * var(--u)); }
+      .card p { font-size: calc(43 * var(--u)); line-height: calc(55 * var(--u)); }
+      .card .lista { font-size: calc(40 * var(--u)); line-height: calc(50 * var(--u)); margin-top: calc(28 * var(--u)); width: calc(1010 * var(--u)); white-space: normal; }
+      .lista br { display: none !important; } .ponto { display: inline; }
+      .botao { min-height: calc(127 * var(--u)); padding: 0 calc(29 * var(--u)); gap: calc(32 * var(--u)); border-radius: calc(39 * var(--u)); font-size: calc(40.6 * var(--u)); margin-top: calc(38 * var(--u)); }
+      .botao svg { width: calc(39 * var(--u)); }
+      .orc { margin-left: calc(149 * var(--u)); padding: calc(108 * var(--u)) 0 0 calc(102 * var(--u)); }
+      .orc h2 svg { width: calc(463 * var(--u)); margin-bottom: calc(28 * var(--u)); }
+      .orc .arte { width: calc(530 * var(--u)); left: calc(1155 * var(--u)); top: calc(113 * var(--u)); }
+      .sombra { width: calc(405 * var(--u)); left: calc(1219 * var(--u)); top: calc(660 * var(--u)); }
+      .port { margin: calc(216 * var(--u)) 0 0 calc(144 * var(--u)); padding: calc(186 * var(--u)) 0 0 calc(781 * var(--u)); width: calc(1626 * var(--u)); }
+      .port h2 svg { width: calc(343 * var(--u)); margin: 0 0 calc(21 * var(--u)) calc(7 * var(--u)); }
+      .port .botao { margin-top: calc(48 * var(--u)); }
+      .port .arte { width: calc(681 * var(--u)); left: calc(-6 * var(--u)); top: calc(-98 * var(--u)); }
+      .fim { padding-top: calc(436 * var(--u)); }
+      .fim h2 { font-size: calc(40 * var(--u)); }
+      .fim p { font-size: calc(72.5 * var(--u)); margin-top: calc(39 * var(--u)); }
+      .zap { font-size: calc(33 * var(--u)); min-height: calc(92 * var(--u)); padding: 0 calc(38 * var(--u)); gap: calc(20 * var(--u)); margin-top: calc(41 * var(--u)); }
+      .zap svg { width: calc(48 * var(--u)); }
+      footer { font-size: calc(32 * var(--u)); padding: calc(170 * var(--u)) 0 calc(120 * var(--u)); }
       /* área de toque maior, sem mudar o visual */
       .botao, .zap { position: relative; }
       .selo::after, .perfil::after, .botao::after, .zap::after { content: ""; position: absolute; inset: -11px; }
@@ -248,6 +270,7 @@
   <footer>© 2026 Kayky Naydson · Super <span>|</span> @kayky.naydson</footer>
 </body>
 </html>
+
 
 
 
